@@ -135,8 +135,8 @@
 	function test() {
 		var temp = email.value;
 		//对电子邮件的验证
-		var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-		if (!myreg.test(temp.value)) {
+		//var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+		if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(temp)) {
 			console.log("邮箱错误");
 			alert('请输入有效的E_mail');
 			myreg.focus();
